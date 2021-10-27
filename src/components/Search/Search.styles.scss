@@ -3,13 +3,11 @@
 
 .search {
   margin: $margin-mobile;
-  border-bottom: 1px solid $col-background-secondary;
 
   &__input {
     width: 100%;
     & input {
       color: $col-text-primary;
-      border-color: $col-background-secondary;
       &:focus {
         font-weight: bold;
       }
@@ -21,13 +19,19 @@
 }
 
 .filter {
-  width: 5rem;
-  border-bottom: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $col-background-secondary;
+  border-top: 1px solid $col-background-secondary;
+  margin-top: $margin-between-components;
 
   & label {
     color: $col-text-primary;
+    margin: $margin-between-items;
   }
   &__select {
+    margin: $margin-between-items;
     width: 7.5rem;
     height: 3rem;
     color: $col-text-primary;

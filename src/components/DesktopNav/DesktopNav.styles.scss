@@ -1,0 +1,27 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.desktop-nav {
+  display: none;
+
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__item {
+    margin: $margin-between-items;
+    font-size: $body-text;
+  }
+
+  &__logo {
+    height: 41px;
+    width: 160px;
+  }
+}

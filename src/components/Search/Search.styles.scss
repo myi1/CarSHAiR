@@ -1,0 +1,38 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.search {
+  margin: $margin-mobile;
+  border-bottom: 1px solid $col-background-secondary;
+
+  &__input {
+    width: 100%;
+    & input {
+      color: $col-text-primary;
+      border-color: $col-background-secondary;
+      &:focus {
+        font-weight: bold;
+      }
+    }
+  }
+  &__icon {
+    color: $col-text-secondary;
+  }
+}
+
+.filter {
+  width: 5rem;
+  border-bottom: none;
+
+  & label {
+    color: $col-text-primary;
+  }
+  &__select {
+    width: 7.5rem;
+    height: 3rem;
+    color: $col-text-primary;
+    &:before {
+      border-color: red;
+    }
+  }
+}

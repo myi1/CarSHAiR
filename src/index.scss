@@ -1,7 +1,8 @@
 @use "./styles/partials/variables" as *;
 
 body,
-a {
+a,
+html {
   margin: 0;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,6 +10,7 @@ a {
   background-color: $col-background-primary;
   color: $col-text-primary;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 code {

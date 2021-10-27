@@ -2,21 +2,28 @@
 @use "../../styles/partials/variables" as *;
 
 .card {
+  //   background-color: $col-background-priamry;
   margin: 0 $margin-mobile;
-  box-shadow: 9px 13px 18px -12px rgba(0, 0, 0, 0.75);
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  &__header-container {
+    margin: $margin-between-items 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   &__make {
-    margin: $margin-between-items 0 0;
+    // margin: $margin-between-items 0 0;
+    margin: 0;
     color: $col-text-primary;
   }
+
   &__model {
-    margin: 0.2rem 0 $margin-between-items;
+    margin: 0 0;
     color: $col-text-secondary;
     font-style: italic;
   }
   &__image-container {
-    height: 15rem;
-    // margin: $margin-between-items;
+    height: 16rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -29,11 +36,11 @@
   &__location {
     margin-left: $margin-between-items;
   }
-  &__price {
+  &__price,
+  &__model {
     margin-right: $margin-between-items;
   }
   &__cta {
-    // margin: $margin-between-items;
     display: flex;
     justify-content: center;
     align-items: center;

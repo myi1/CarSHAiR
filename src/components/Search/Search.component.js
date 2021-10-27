@@ -11,7 +11,7 @@ import Select from "@mui/material/Select";
 
 import "./Search.styles.scss";
 
-export const Search = () => {
+export const Search = ({ handleSearch }) => {
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
   const [type, setType] = useState("");
@@ -26,6 +26,7 @@ export const Search = () => {
         id='input-with-icon-adornment'
         placeholder='Search by Make or Model'
         className='search__input'
+        onChange={(e) => handleSearch(e)}
         // disableUnderline
         startAdornment={
           <InputAdornment position='start'>

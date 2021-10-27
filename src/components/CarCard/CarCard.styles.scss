@@ -1,0 +1,48 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.card {
+  margin: 0 $margin-mobile;
+  box-shadow: 9px 13px 18px -12px rgba(0, 0, 0, 0.75);
+
+  &__make {
+    margin: $margin-between-items 0 0;
+    color: $col-text-primary;
+  }
+  &__model {
+    margin: 0.2rem 0 $margin-between-items;
+    color: $col-text-secondary;
+    font-style: italic;
+  }
+  &__image-container {
+    height: 15rem;
+    // margin: $margin-between-items;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  &__details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__location {
+    margin-left: $margin-between-items;
+  }
+  &__price {
+    margin-right: $margin-between-items;
+  }
+  &__cta {
+    // margin: $margin-between-items;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    background-color: $col-cta;
+    font-size: 2rem;
+    cursor: pointer;
+    &:hover {
+      background-color: $col-cta-hover;
+    }
+  }
+}

@@ -4,8 +4,7 @@ import { CarCard } from "../CarCard/CarCard.component";
 
 import "./Results.styles.scss";
 
-export const Results = ({ cars, query, count }) => {
-  console.log(cars);
+export const Results = ({ cars, query, count, year }) => {
   return (
     <div className='results'>
       <p className='results__query'>
@@ -19,8 +18,8 @@ export const Results = ({ cars, query, count }) => {
             <CarCard
               key={i}
               make={car.Make_Name}
-              model={car.Make_Name}
-              year='2020'
+              model={car.Model_Name}
+              year={year ? year : "Multiple Model Years"}
             />
           ))
         : null}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import Input from "@mui/material/Input";
 import InputAdornment from "@mui/material/InputAdornment";
@@ -11,15 +11,25 @@ import Select from "@mui/material/Select";
 
 import "./Search.styles.scss";
 
-export const Search = ({ handleSearch }) => {
-  const [year, setYear] = useState("");
-  const [make, setMake] = useState("");
-  const [type, setType] = useState("");
-
-  const handleChange = (event) => {
-    setYear(event.target.value);
+export const Search = ({
+  handleSearch,
+  filterByYear,
+  filterByMake,
+  filterByType,
+  year,
+  make,
+  type,
+  allMakes,
+  allTypes,
+}) => {
+  const yearsArray = [];
+  const createArrayofYears = () => {
+    for (let i = 1995; i < 2022; i++) {
+      yearsArray.unshift(i.toString());
+    }
   };
-
+  createArrayofYears();
+  // console.log(allTypes);
   return (
     <div className='search'>
       <Input
@@ -45,10 +55,12 @@ export const Search = ({ handleSearch }) => {
             id='select-year'
             value={year}
             label='Year'
-            onChange={handleChange}>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            onChange={(e) => filterByYear(e)}>
+            {yearsArray.map((year) => (
+              <MenuItem key={year} value={year}>
+                {year}
+              </MenuItem>
+            ))}
           </Select>
         </FormControl>
         <FormControl>
@@ -58,13 +70,16 @@ export const Search = ({ handleSearch }) => {
           <Select
             className='filter__select'
             labelId='select-make-label'
-            id='select-year'
+            id='select-make'
             value={make}
             label='Make'
-            onChange={handleChange}>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            onChange={(e) => filterByMake(e)}>
+            {allMakes.length > 0 &&
+              allMakes.map((make) => (
+                <MenuItem key={make.Make_ID} value={make.Make_Name}>
+                  {make.Make_Name}
+                </MenuItem>
+              ))}
           </Select>
         </FormControl>
         <FormControl>
@@ -74,13 +89,16 @@ export const Search = ({ handleSearch }) => {
           <Select
             className='filter__select'
             labelId='select-type-label'
-            id='select-year'
+            id='select-type'
             value={type}
             label='Type'
-            onChange={handleChange}>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            onChange={(e) => filterByType(e)}>
+            {allTypes.length > 0 &&
+              allTypes.map((type) => (
+                <MenuItem key={type.VehicleTypeId} value={type.VehicleTypeName}>
+                  {type.VehicleTypeName}
+                </MenuItem>
+              ))}
           </Select>
         </FormControl>
       </div>

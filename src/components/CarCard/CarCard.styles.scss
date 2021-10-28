@@ -2,8 +2,7 @@
 @use "../../styles/partials/variables" as *;
 
 .card {
-  //   background-color: $col-background-priamry;
-  margin: 0 $margin-mobile;
+  margin: 0 $margin-mobile $margin-between-components;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   &__header-container {
     margin: $margin-between-items 0;
@@ -12,9 +11,9 @@
     justify-content: space-between;
   }
   &__make {
-    // margin: $margin-between-items 0 0;
-    margin: 0;
+    margin: 0 2rem 0 0;
     color: $col-text-primary;
+    @include hideOverflow;
   }
 
   &__model {

@@ -29,7 +29,6 @@ export const Search = ({
     }
   };
   createArrayofYears();
-  // console.log(allTypes);
   return (
     <div className='search'>
       <Input
@@ -37,7 +36,6 @@ export const Search = ({
         placeholder='Search by Make or Model'
         className='search__input'
         onChange={(e) => handleSearch(e)}
-        // disableUnderline
         startAdornment={
           <InputAdornment position='start'>
             <SearchIcon className='search__icon' />

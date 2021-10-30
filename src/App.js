@@ -16,14 +16,6 @@ function App() {
   const [make, setMake] = useState("");
   const [type, setType] = useState("");
 
-  function usePrevious(value) {
-    const ref = useRef();
-    useEffect(() => {
-      ref.current = value;
-    });
-    return ref.current;
-  }
-
   function getUniqueListBy(arr, key) {
     return [...new Map(arr.map((item) => [item[key], item])).values()];
   }

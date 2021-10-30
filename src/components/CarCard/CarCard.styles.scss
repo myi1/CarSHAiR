@@ -2,23 +2,30 @@
 @use "../../styles/partials/variables" as *;
 
 .card {
+  width: 90%;
   margin: 0 $margin-mobile $margin-between-components;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: $col-background-secondary;
+  @include hideOverflow;
+
   &__header-container {
-    margin: $margin-between-items 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 1rem 0;
+    // display: flex;
+    // flex-direction: column;
+
+    // align-items: center;
+    // justify-content: space-between;
   }
   &__make {
-    margin: 0 2rem 0 0;
+    margin: 0 $margin-between-items 0;
     color: $col-text-primary;
     @include hideOverflow;
   }
 
   &__model {
-    margin: 0 0;
-    color: $col-text-secondary;
+    margin: 0 $margin-between-items;
+    color: $col-alternate;
     font-style: italic;
   }
   &__image-container {
@@ -47,6 +54,9 @@
     background-color: $col-cta;
     font-size: 2rem;
     cursor: pointer;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: $col-background-secondary;
     &:hover {
       background-color: $col-cta-hover;
     }

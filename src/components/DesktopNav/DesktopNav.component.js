@@ -1,6 +1,6 @@
 import React from "react";
 
-import logo from "../../assets/images/logo-white.png";
+import logo from "../../assets/images/logo.png";
 
 import "./DesktopNav.styles.scss";
 

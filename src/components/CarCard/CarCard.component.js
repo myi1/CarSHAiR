@@ -6,8 +6,8 @@ export const CarCard = ({ make, year, model }) => {
   return (
     <div className='card'>
       <div className='card__header-container'>
-        <h3 className='card__make'>{make}</h3>
-        <p className='card__model'>{`${year} ${model}`}</p>
+        <h3 className='card__make'>{`${year} ${model}`}</h3>
+        <p className='card__model'>{make}</p>
       </div>
       <div
         className='card__image-container'

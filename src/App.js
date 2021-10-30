@@ -11,7 +11,6 @@ function App() {
   const [allMakes, setAllMakes] = useState([]);
   const [allTypes, setAllTypes] = useState([]);
   const [query, setQuery] = useState("");
-  const prevQuery = usePrevious(query);
   const [count, setCount] = useState("");
   const [year, setYear] = useState("");
   const [make, setMake] = useState("");
@@ -41,12 +40,11 @@ function App() {
         setQuery(e.target.value);
         setCount(response.data.Count);
         setAllMakes(getUniqueListBy(response.data.Results, "Make_ID"));
+        setYear("");
+        setMake("");
+        setType("");
       })
-      .then((_response) => {
-        if (query !== prevQuery) {
-          getTypesByMake();
-        }
-      })
+
       .catch((error) => {
         console.log(error);
       });
@@ -58,15 +56,15 @@ function App() {
 
   const setYearHandler = (e) => {
     setYear(e.target.value);
-    filterHandler(e);
+    filterHandler(e.target.value);
   };
   const setMakeHandler = (e) => {
     setMake(e.target.value);
-    filterHandler(e);
+    filterHandler(e.target.value);
   };
   const setTypeHandler = (e) => {
     setType(e.target.value);
-    filterHandler(e);
+    filterHandler(e.target.value);
   };
 
   const filterHandler = (e) => {
@@ -81,14 +79,29 @@ function App() {
       filterByYearAndTypeAndMake(e);
     } else if (query && !year && !make && type) {
       filterByType(e);
+    } else if (!year && make && !type) {
+      filterByMake(e);
     }
   };
 
-  const filterByYear = (e) => {
-    console.log(typeof e.target.value);
+  const filterByYear = (year) => {
     axios
       .get(
         `https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeYear/make/${query}/modelyear/${year}?format=json`
+      )
+      .then((response) => {
+        setResults(response.data.Results);
+        setCount(response.data.Count);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const filterByMake = (m) => {
+    axios
+      .get(
+        `https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMake/${m}?format=json`
       )
       .then((response) => {
         setResults(response.data.Results);
@@ -158,6 +171,9 @@ function App() {
         console.log(error);
       });
   };
+
+  useEffect(getTypesByMake, [query]);
+
   return (
     <div className='App'>
       <NavBar />
@@ -166,7 +182,6 @@ function App() {
         filterByYear={setYearHandler}
         filterByMake={setMakeHandler}
         filterByType={setTypeHandler}
-        // filterHandler={filterHandler}
         year={year}
         make={make}
         type={type}

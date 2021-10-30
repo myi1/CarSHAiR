@@ -14,17 +14,20 @@
     }
   }
   &__icon {
-    color: $col-text-secondary;
+    color: $col-alternate;
   }
 }
 
 .filter {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid $col-background-secondary;
-  border-top: 1px solid $col-background-secondary;
+  border-bottom: 1px solid $col-background-alternate;
+  border-top: 1px solid $col-background-alternate;
   margin-top: $margin-between-components;
+  @include tablet {
+    justify-content: flex-start;
+  }
 
   & label {
     color: $col-text-primary;

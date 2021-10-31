@@ -6,7 +6,7 @@
   margin: 0 $margin-mobile $margin-between-components;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
-  background-color: $col-background-secondary;
+  //   background-color: $col-background-secondary;
   @include hideOverflow;
 
   &__header-container {

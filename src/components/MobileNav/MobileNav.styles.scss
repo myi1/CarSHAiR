@@ -6,7 +6,7 @@
   grid-template-columns: 1.7fr 0.3fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  @include desktop {
+  @include tablet {
     display: none;
   }
 

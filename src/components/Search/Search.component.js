@@ -33,7 +33,7 @@ export const Search = ({
     <div className='search'>
       <Input
         id='input-with-icon-adornment'
-        placeholder='Search by Make or Model'
+        placeholder='Search by Make'
         className='search__input'
         onChange={(e) => handleSearch(e)}
         startAdornment={

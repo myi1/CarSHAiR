@@ -3,6 +3,19 @@
 
 .search {
   margin: $margin-mobile;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include tablet {
+    margin: $margin-tablet;
+  }
+
+  @include desktop {
+    margin: $margin-desktop auto;
+    max-width: 40%;
+  }
 
   &__input {
     width: 100%;
@@ -22,8 +35,6 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  border-bottom: 1px solid $col-background-alternate;
-  border-top: 1px solid $col-background-alternate;
   margin-top: $margin-between-components;
   @include tablet {
     justify-content: flex-start;

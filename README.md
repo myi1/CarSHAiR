@@ -1,24 +1,44 @@
-<h1 align="center">
-    CarSHAiR Technical Assessment
-</h1>
+# CarSHAiR Technical Assessment
 
-<h2 align="center">
-    Developed by: Muhammad Ismail
-</h2>
-<p align="center">
-    www.myismail.com
-</p>
+A Car share search page with search bar and filters.
 
-1. **Installing the Dependencies**
-   Navigate into the root directory of the project and run the following command in the terminal
+## Description
+
+A fully responsilve, mobile-first SPA built on React.js. This demos a car share app's search page using dummy data pulled from the NHTSA API.
+
+## Getting Started
+
+### Installing the Dependencies
+
+- Navigate into the root directory of the project and run the following command in the terminal
 
 ```shell
 npm install
 ```
 
-2. **Running the Development Build**
-   After all dependencies have been installed, run the following code to start the project in development mode.
+### Executing program
+
+- After all dependencies have been installed, run the following code in the root directory to start the project in development mode.
 
 ```shell
 npm run start
 ```
+
+## Help
+
+Please contact the author if you encounter any issues.
+
+## Authors
+
+**Muhammad Yahya Ismail**
+https://www.myismail.com
+https://www.github.com/myi1
+https://www.linkedin.com/in/muhammadyismail/
+
+## Version History
+
+- 0.2
+  - Fixed bugs in filter functionality
+  -
+- 0.1
+  - Initial Release

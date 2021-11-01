@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/CarSHAiR/static/css/main.e006f2f9.chunk.css",
+    "main.js": "/CarSHAiR/static/js/main.80549503.chunk.js",
+    "main.js.map": "/CarSHAiR/static/js/main.80549503.chunk.js.map",
+    "runtime-main.js": "/CarSHAiR/static/js/runtime-main.171b523f.js",
+    "runtime-main.js.map": "/CarSHAiR/static/js/runtime-main.171b523f.js.map",
+    "static/js/2.fe0c72ad.chunk.js": "/CarSHAiR/static/js/2.fe0c72ad.chunk.js",
+    "static/js/2.fe0c72ad.chunk.js.map": "/CarSHAiR/static/js/2.fe0c72ad.chunk.js.map",
+    "index.html": "/CarSHAiR/index.html",
+    "static/css/main.e006f2f9.chunk.css.map": "/CarSHAiR/static/css/main.e006f2f9.chunk.css.map",
+    "static/js/2.fe0c72ad.chunk.js.LICENSE.txt": "/CarSHAiR/static/js/2.fe0c72ad.chunk.js.LICENSE.txt",
+    "static/media/car1.bebcf25a.jpg": "/CarSHAiR/static/media/car1.bebcf25a.jpg",
+    "static/media/car10.c484731b.jpg": "/CarSHAiR/static/media/car10.c484731b.jpg",
+    "static/media/car11.075b4c2e.jpg": "/CarSHAiR/static/media/car11.075b4c2e.jpg",
+    "static/media/car12.976a69cb.jpg": "/CarSHAiR/static/media/car12.976a69cb.jpg",
+    "static/media/car13.26c6b5c2.jpg": "/CarSHAiR/static/media/car13.26c6b5c2.jpg",
+    "static/media/car14.aca1ca90.jpg": "/CarSHAiR/static/media/car14.aca1ca90.jpg",
+    "static/media/car15.c5ee6c50.jpg": "/CarSHAiR/static/media/car15.c5ee6c50.jpg",
+    "static/media/car2.72c303a5.jpg": "/CarSHAiR/static/media/car2.72c303a5.jpg",
+    "static/media/car3.60f30599.jpg": "/CarSHAiR/static/media/car3.60f30599.jpg",
+    "static/media/car4.2250ffd7.jpg": "/CarSHAiR/static/media/car4.2250ffd7.jpg",
+    "static/media/car5.26bb183c.jpg": "/CarSHAiR/static/media/car5.26bb183c.jpg",
+    "static/media/car6.92443141.jpg": "/CarSHAiR/static/media/car6.92443141.jpg",
+    "static/media/car7.b6476429.jpg": "/CarSHAiR/static/media/car7.b6476429.jpg",
+    "static/media/car8.92443141.jpg": "/CarSHAiR/static/media/car8.92443141.jpg",
+    "static/media/car9.5f822269.jpg": "/CarSHAiR/static/media/car9.5f822269.jpg",
+    "static/media/logo.77e5a3ff.png": "/CarSHAiR/static/media/logo.77e5a3ff.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.171b523f.js",
+    "static/js/2.fe0c72ad.chunk.js",
+    "static/css/main.e006f2f9.chunk.css",
+    "static/js/main.80549503.chunk.js"
+  ]
+}
